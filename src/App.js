@@ -1,15 +1,60 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {refreshAuthToken} from './actions/auth';
+import LoginForm from './components/LoginForm';
+
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        hello
-      </div>
-    );
-  }
+
+    componentWillReceiveProps(nextProps) {
+	    //if loggedIn is true, call startPeriodicRefresh.
+	    if (nextProps.loggedIn) {
+	        this.startPeriodicRefresh();
+	    //if loggedIn returns false, call the stopPeriodicRefresh method.
+	    } 
+	    else if (!nextProps.loggedIn) {
+	        this.stopPeriodicRefresh();
+	    }
+	}
+
+    //when App.js is unmounted, call the stopPeriodicRefresh method, 
+    //which will stop the user's token from being refreshed
+    componentWillUnmount() {
+        this.stopPeriodicRefresh();
+    }
+
+    //create the this.refreshInterval variable and set it's value
+    //to refresh the user's token every hour
+    startPeriodicRefresh() {
+        this.refreshInterval = setInterval(
+            () => this.props.dispatch(refreshAuthToken()),
+            60 * 60 * 1000 // One hour
+        );
+    }
+
+    stopPeriodicRefresh() {
+        //if the startPeriodicRefresh method has not be called, 
+        //and this.refreshInterval is undefined, stop and do nothing
+        if (!this.refreshInterval) {
+            return;
+        }
+        //if this.refreshInteval has been created,
+        //clear the interval causing token refreshes
+        clearInterval(this.refreshInterval);
+    }
+
+  	render() {
+	    return (
+		    <div>
+		    	<LoginForm />
+		    </div>
+	    );
+  	}
 }
 
-export default App;
+const mapStateToProps = state => ({
+    loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(App);
