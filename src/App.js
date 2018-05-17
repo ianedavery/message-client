@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {refreshAuthToken} from './actions/auth';
 import LoginForm from './components/LoginForm';
 
@@ -46,10 +47,14 @@ class App extends Component {
 
   	render() {
 	    return (
-		    <div>
-		    	<LoginForm />
-		    </div>
-	    );
+            <Router>
+    		    <div>
+                    <Switch>
+        		    	<Route exact path='/' component={LoginForm} />
+                    </Switch>
+    		    </div>
+	        </Router>
+        );
   	}
 }
 
