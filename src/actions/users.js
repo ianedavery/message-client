@@ -1,7 +1,7 @@
 import {SubmissionError} from 'redux-form';
 
 import {API_BASE_URL} from '../config';
-import {normalizeResponseErrors} from './util';
+import {normalizeResponseErrors} from '../utils';
 
 
 //send a 'put' request to the server to register new users

@@ -13,6 +13,7 @@ class LandingPage extends Component {
 			<div>
 				This is the landing page
 				<button type='button'><Link to='/login'>Login</Link></button>
+				<button type='button'><Link to='/register'>Register</Link></button>
 			</div>
 		)
 	}
