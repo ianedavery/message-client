@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
+import {Redirect, Link} from 'react-router-dom';
 
 class LandingPage extends Component {
 	render() {
@@ -10,7 +10,10 @@ class LandingPage extends Component {
 		}
 
 		return (
-			<div>This is the landing page</div>
+			<div>
+				This is the landing page
+				<button type='button'><Link to='/login'>Login</Link></button>
+			</div>
 		)
 	}
 }
