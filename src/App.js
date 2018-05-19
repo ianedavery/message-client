@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {refreshAuthToken} from './actions/auth';
 import LoginForm from './components/LoginForm';
+import Dashboard from './components/Dashboard';
+import LandingPage from './components/LandingPage';
 
 import './App.css';
 
@@ -50,7 +52,9 @@ class App extends Component {
             <Router>
     		    <div>
                     <Switch>
-        		    	<Route exact path='/' component={LoginForm} />
+        		    	<Route exact path='/' component={LandingPage} />
+                        <Route path='/login' component={LoginForm} />
+                        <Route path='/dashboard' component={Dashboard} />
                     </Switch>
     		    </div>
 	        </Router>
