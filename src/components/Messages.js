@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 class Messages extends Component {
-	
+
 	render() {
 
 		let loading,
@@ -14,12 +14,10 @@ class Messages extends Component {
 		if(this.props.messages.messages.length) {
 			messages = this.props.messages.messages.map((message, index) => (
 				<p key={index}>
-					{message.text} {message.author}
+					{message.text} {message.author} {message.date}
 				</p> 
-			));
+			)).reverse();
 		}
-
-		console.log(this.props.messages);
 
 		return (
 
