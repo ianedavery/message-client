@@ -17,7 +17,7 @@ export const retrieveMessagesError = error => ({
 	error
 });
 
-export const retrieveMessages = () => dispatch => {
+export const retrieveMessages = () => (dispatch, getState) => {
 	dispatch(retrieveMessagesLoading());
 	const authToken = getState().auth.authToken
 	return fetch(`${API_BASE_URL}/messages`, {

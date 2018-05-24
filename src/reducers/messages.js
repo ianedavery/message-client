@@ -2,24 +2,27 @@ import {RETRIEVE_MESSAGES_REQUEST, RETRIEVE_MESSAGES_SUCCESS, RETRIEVE_MESSAGES_
 
 const initialState = {
 	error: null,
-	loading: null,
-	messages: []
+	loading: false,
+	messages: ''
 }
 
 export default function messagesReducer(state = initialState, action) {
+	if(action.type === RETRIEVE_MESSAGES_REQUEST) {
+		return Object.assign({}, state, {
+			loading: true,
+			error: null
+		});
+	}
 	if(action.type === RETRIEVE_MESSAGES_SUCCESS) {
 		return Object.assign({}, state, {
-			messages: 
-				[
-					...state.messages,
-						{
-							text: action.text,
-							author: action.author,
-							date: action.date
-						}
-				]
-			}
-		);
+			messages: action.messages
+		});
+	}
+	if(action.type === RETRIEVE_MESSAGES_ERROR) {
+		return Object.assign({}, state, {
+			error: action.error,
+			loading: false
+		});
 	}
 	return state;
 } 
