@@ -18,12 +18,11 @@ class Dashboard extends Component {
 	}
 
 	render() {
-		console.log(this.props.messages);
 		return (
 			<div>
 				Hello
 				<button type='button' onClick={() => this.logOut()}>Logout</button>
-				<Messages />
+				<Messages messages={this.props.messages} />
 			</div>
 		)
 	}
