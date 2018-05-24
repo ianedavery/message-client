@@ -26,7 +26,10 @@ export const retrieveMessages = () => (dispatch, getState) => {
 			Authorization: `Bearer ${authToken}`
 		}
 	})
-	.then(res => res.json())
-	.then(messages => dispatch(retrieveMessagesSuccess(messages)))
-	.catch(err => dispatch(retrieveMessagesError(err)));
+	.then(res => 
+		res.json())
+	.then(messages => 
+		dispatch(retrieveMessagesSuccess(messages)))
+	.catch(err => 
+		dispatch(retrieveMessagesError(err)));
 }

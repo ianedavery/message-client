@@ -1,9 +1,9 @@
 import {API_BASE_URL} from '../config';
 
 export const ADD_MESSAGE_SUCCESS = 'ADD_MESSAGE_SUCCESS';
-export const addMessageSuccess = message => ({
+export const addMessageSuccess = text => ({
 	type: ADD_MESSAGE_SUCCESS,
-	message
+	text
 });
 
 export const ADD_MESSAGE_ERROR = 'ADD_MESSAGE_ERROR';
@@ -12,20 +12,20 @@ export const addMessageError = error => ({
     error
 });
 
-export const addMessage = message => (dispatch, getState) => {
+export const addMessage = text => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
 	return fetch(`${API_BASE_URL}/messages`, {
 		method: 'POST',
-		header: {
+		headers: {
 			Authorization: `Bearer ${authToken}`,
 			'content-type': 'application/json'
 		},
-        body: JSON.stringify(recipie)
+        body: JSON.stringify(text)
     })
     .then(res => 
     	res.json())
-    .then(message => 
-    	dispatch(addMessageSuccess(message)))
+    .then(text => 
+    	dispatch(addMessageSuccess(text)))
     .catch(err => 
     	dispatch(addMessageError(err)));
 }
