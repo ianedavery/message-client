@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {Field, reduxForm} from 'redux-form';
+import {Field, reduxForm, reset} from 'redux-form';
 import {addMessage} from '../actions/newMessage';
 
 class MessageReduxForm extends Component {
 
 	onSubmit(text) {
 		this.props.dispatch(addMessage(text));
+		this.props.dispatch(reset('text'));
 		this.props.handleNewMessage();
 	}
 
