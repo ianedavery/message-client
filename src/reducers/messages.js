@@ -2,7 +2,7 @@ import {RETRIEVE_MESSAGES_REQUEST, RETRIEVE_MESSAGES_SUCCESS, RETRIEVE_MESSAGES_
 
 const initialState = {
 	error: null,
-	loading: false,
+	loading: true,
 	messages: ''
 }
 
@@ -15,7 +15,8 @@ export default function messagesReducer(state = initialState, action) {
 	}
 	if(action.type === RETRIEVE_MESSAGES_SUCCESS) {
 		return Object.assign({}, state, {
-			messages: action.messages
+			messages: action.messages,
+			loading: false
 		});
 	}
 	if(action.type === RETRIEVE_MESSAGES_ERROR) {

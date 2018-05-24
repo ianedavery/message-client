@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {retrieveMessages} from '../actions/messages';
 import {clearAuthToken} from '../local-storage';
+import Messages from './Messages';
 
 class Dashboard extends Component {
 
@@ -22,6 +23,7 @@ class Dashboard extends Component {
 			<div>
 				Hello
 				<button type='button' onClick={() => this.logOut()}>Logout</button>
+				<Messages />
 			</div>
 		)
 	}
