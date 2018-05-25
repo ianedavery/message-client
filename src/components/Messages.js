@@ -13,18 +13,24 @@ class Messages extends Component {
 
 		if(this.props.messages.messages.length) {
 			messages = this.props.messages.messages.map((message, index) => (
-				<p key={index}>
-					{message.text} {message.author} {message.date}
-				</p> 
+				<div key={index} className='message'>
+					<div className='poster_info'>
+						<img className='avatar' src={'https://api.adorable.io/avatars/50/' + message.author + '@adorable.io.png'} alt='avatar' />
+						<p className='metadata'>{message.author}<br />{message.date}</p>
+					</div> 
+					<p className='message_text'>
+						{message.text}
+					</p> 
+				</div> 
 			)).reverse();
 		}
 
 		return (
 
-			<div>
+			<section className='messages'>
 				{loading}
 				{messages}
-			</div>
+			</section>
 
 		);
 	}
