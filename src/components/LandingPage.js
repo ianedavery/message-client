@@ -12,8 +12,8 @@ class LandingPage extends Component {
 		return (
 			<div>
 				This is the landing page
-				<button type='button'><Link to='/login'>Login</Link></button>
-				<button type='button'><Link to='/register'>Register</Link></button>
+				<div><Link to='/login'>Login</Link></div>
+				<div><Link to='/register'>Register</Link></div>
 			</div>
 		)
 	}
