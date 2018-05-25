@@ -14,9 +14,16 @@
 .metadata {
   position: absolute;
   margin: 0;
-  top: 17px;
+  top: 15px;
   left: 70px;
+  color: #666666;
+  font-size: 15px;
+}
+.metadata span {
+  font-size: 20px;
+  color: #3A33FF;
 }
 .message_text {
   margin: 16px 10px 16px 10px;
+  font-size: 24px;
 }
