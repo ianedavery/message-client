@@ -19,7 +19,7 @@ class Messages extends Component {
 				<div key={index} className='message'>
 					<div className='poster_info'>
 						<img className='avatar' src={'https://api.adorable.io/avatars/50/' + message.author + '@adorable.io.png'} alt='avatar' />
-						<p className='metadata'><span>{message.author}</span><br />{Moment(message.date).format('MMM D, h:m a')}</p>
+						<p className='metadata'><span>{message.author}</span><br />{Moment(message.date).format('MMM D, hh:mm a')}</p>
 					</div> 
 					<p className='message_text'>
 						{message.text}
