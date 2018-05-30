@@ -6,7 +6,7 @@ import {normalizeResponseErrors} from '../utils';
 
 //send a 'put' request to the server to register new users
 export const registerUser = user => dispatch => {
-    return fetch(`${API_BASE_URL}/users`, {
+    return fetch(`${API_BASE_URL}api/users`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

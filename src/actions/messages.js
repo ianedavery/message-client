@@ -20,7 +20,7 @@ export const retrieveMessagesError = error => ({
 export const retrieveMessages = () => (dispatch, getState) => {
 	dispatch(retrieveMessagesLoading());
 	const authToken = getState().auth.authToken
-	return fetch(`${API_BASE_URL}/messages`, {
+	return fetch(`${API_BASE_URL}api/messages`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${authToken}`
