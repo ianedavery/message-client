@@ -3,16 +3,24 @@ import {connect} from 'react-redux';
 import {Redirect, Link} from 'react-router-dom';
 import {TransitionGroup} from 'react-transition-group'
 import Box from './Box';
+import LoginAndRegister from './LoginAndRegister';
 
 class LandingPage extends Component {
 
 	state = {
-		shouldShowBox: true
+		shouldShowBox: true,
+		shouldShowLoginAndRegisterConatiner: true
 	};
 
 	toggleBox = () => {
 		this.setState({
 			shouldShowBox: !this.state.shouldShowBox
+		});
+	}
+
+	toggleLoginAndRegister = () => {
+		this.setState({
+			shouldShowLoginAndRegisterConatiner: !this.state.shouldShowLoginAndRegisterConatiner
 		});
 	}
 
@@ -22,7 +30,7 @@ class LandingPage extends Component {
 			return <Redirect to='/dashboard' />;
 		}
 
-		let myHistory = this.props.history;
+		const myHistory = () => this.props.history.push('/login');
 
 		return (
 			
@@ -30,18 +38,9 @@ class LandingPage extends Component {
 				<TransitionGroup>
 					{this.state.shouldShowBox && <Box />}
 				</TransitionGroup>
-				<div className='login_button_container'>
-					<button className='login_link login_button' onClick={e =>
-						{
-							this.toggleBox();
-							setTimeout(function() {myHistory.push('/login');}, 750)}
-						}>
-						Login
-					</button>
-				</div>
-				<div className='register_button'>
-					<Link className='register_link' to='/register'>Register</Link>
-				</div>
+				<TransitionGroup>
+					{this.state.shouldShowLoginAndRegisterConatiner && <LoginAndRegister goToLogin={() => setTimeout(function(){myHistory();},1000)} toggleLoginAndRegister={e => this.toggleLoginAndRegister(e)} toggleBox={e => this.toggleBox(e)}/>}
+				</TransitionGroup>
 			</div>
 		)
 	}

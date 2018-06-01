@@ -3,12 +3,6 @@ import {TweenMax} from "gsap/TweenMax";
 
 class Box extends Component {
 
-	  componentWillEnter (callback) {
-	    const el = this.container;
-	    const el2 = this.container2
-	    TweenMax.staggerFromTo(el, 1, {x: 1000, y: 0}, {x: 0, y: 0, onComplete: callback});
-	  }
-
 	  componentWillLeave (callback) {
 	    const el1 = this.container1;
 	    const el2 = this.container2;
