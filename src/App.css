@@ -5,6 +5,52 @@ body {
 form {
   text-align: center;
 }
+.box {
+  position: fixed;
+  width: 100%;
+  height: 40px;    
+}
+.box1 {
+  top: 0;
+  background-color: red;
+
+}
+.box2 {
+  top: 45px;
+  background-color: green;
+}
+.box3 {
+  top: 90px;
+  background-color: yellow;
+}
+.box4 {
+  top: 135px;
+  background-color: purple;
+}
+.login_button_container {
+  text-align: center;
+}
+.login_button,
+.register_button {
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 70px;
+  font-weight: 700;
+  font-color: #FFFFFF;
+}
+.login_button {
+  margin-top: 57%;
+  background-color: #4C86FF;
+  border: none; 
+}
+.register_button {
+  margin-top: 20px;
+}
+.register_link,
+.login_link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 .textarea_container {
   padding: 0 20px 0 20px;
 }
