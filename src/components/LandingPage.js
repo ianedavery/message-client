@@ -34,7 +34,7 @@ class LandingPage extends Component {
 					<button className='login_link login_button' onClick={e =>
 						{
 							this.toggleBox();
-							setTimeout(function() {myHistory.push('/login');}, 600)}
+							setTimeout(function() {myHistory.push('/login');}, 700)}
 						}>
 						Login
 					</button>
