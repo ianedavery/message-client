@@ -40,6 +40,8 @@ form {
 }
 .login_button {
   margin-top: 57%;
+}
+.login_button, .register_button {
   background-color: #4C86FF;
   border: none; 
 }

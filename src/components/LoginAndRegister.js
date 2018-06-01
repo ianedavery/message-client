@@ -19,7 +19,10 @@ class LoginAndRegister extends Component {
 					</button>
 				</div>
 				<div className='register_button'>
-					<Link className='register_link' to='/register'>Register</Link>
+					<button className='register_link register_button' onClick={e => {this.props.goToRegister(); this.props.toggleLoginAndRegister(e); this.props.toggleBox(e)}}>
+						Register
+					</button>
+					{/*<Link className='register_link' to='/register'>Register</Link>*/}
 				</div>
 			</div>
 

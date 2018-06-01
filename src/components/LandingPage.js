@@ -30,7 +30,8 @@ class LandingPage extends Component {
 			return <Redirect to='/dashboard' />;
 		}
 
-		const myHistory = () => this.props.history.push('/login');
+		const loginPush = () => this.props.history.push('/login');
+		const registrationPush = () => this.props.history.push('/register');
 
 		return (
 			
@@ -39,7 +40,7 @@ class LandingPage extends Component {
 					{this.state.shouldShowBox && <Box />}
 				</TransitionGroup>
 				<TransitionGroup>
-					{this.state.shouldShowLoginAndRegisterConatiner && <LoginAndRegister goToLogin={() => setTimeout(function(){myHistory();},1000)} toggleLoginAndRegister={e => this.toggleLoginAndRegister(e)} toggleBox={e => this.toggleBox(e)}/>}
+					{this.state.shouldShowLoginAndRegisterConatiner && <LoginAndRegister goToLogin={() => setTimeout(function(){loginPush();},1000)} goToRegister={() => setTimeout(function(){registrationPush();},1000)} toggleLoginAndRegister={e => this.toggleLoginAndRegister(e)} toggleBox={e => this.toggleBox(e)}/>}
 				</TransitionGroup>
 			</div>
 		)
