@@ -5,27 +5,51 @@ body {
 form {
   text-align: center;
 }
-.box {
+.box_top {
   position: fixed;
   width: 100%;
   height: 40px;    
 }
+.box_bottom {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+}
+.box1, .box8 {
+  background-color: red;
+}
+.box2, .box7 {
+  background-color: green;
+}
+.box3, .box6 {
+  background-color: yellow; 
+}
+.box4, .box5 {
+  background-color: purple; 
+}
 .box1 {
   top: 0;
-  background-color: red;
-
 }
 .box2 {
   top: 45px;
-  background-color: green;
 }
 .box3 {
   top: 90px;
-  background-color: yellow;
 }
 .box4 {
   top: 135px;
-  background-color: purple;
+}
+.box8 {
+  bottom: 0;
+}
+.box7 {
+  bottom: 45px;
+}
+.box6 {
+  bottom: 90px;
+}
+.box5 {
+  bottom: 135px;
 }
 .login_button_container {
   text-align: center;
