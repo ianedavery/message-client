@@ -1,55 +1,94 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #4C86FF;
+  background-color: #00002f;
 }
 form {
   text-align: center;
 }
-.box_top {
+.box_top,
+.box_bottom {
   position: fixed;
   width: 100%;
   height: 40px;    
 }
-.box_bottom {
-  position: fixed;
-  width: 100%;
-  height: 40px;
-}
-.box1, .box8 {
-  background-color: red;
-}
-.box2, .box7 {
-  background-color: green;
-}
-.box3, .box6 {
-  background-color: yellow; 
-}
-.box4, .box5 {
-  background-color: purple; 
+.box1, .box8,
+.box2, .box7,
+.box3, .box6,
+.box4, .box5,
+.box9, .box10,
+.box11, .box12,
+.box13, .box14  {
+  background-color: #FFFFFF;
 }
 .box1 {
   top: 0;
 }
 .box2 {
-  top: 45px;
+  top: 35px;
 }
 .box3 {
-  top: 90px;
+  top: 68px;  
 }
 .box4 {
-  top: 135px;
+  top: 99px;  
+}
+.box5 {
+  top: 129px;  
+}
+.box6 {
+  top: 159px;
+}
+.box7 {
+  top: 187px;
 }
 .box8 {
   bottom: 0;
 }
-.box7 {
-  bottom: 45px;
+.box9 {
+  bottom: 35px;
 }
-.box6 {
-  bottom: 90px;
+.box10 {
+  bottom: 68px;
 }
-.box5 {
-  bottom: 135px;
+.box11 {
+  bottom: 99px;
+}
+.box12 {
+  bottom: 129px;
+}
+.box13 {
+  bottom: 159px;
+}
+.box14 {
+  bottom: 187px;
+}
+.box1,
+.box8 {
+  height: 30px;
+}
+.box2,
+.box9 {
+  height: 25px;
+}
+.box3,
+.box10 {
+  height: 20px;
+}
+.box4,
+.box11 {
+  height: 15px;
+}
+.box5,
+.box12 {
+  height: 10px;
+}
+.box6,
+.box13 {
+  height: 5px;
+}
+.box7,
+.box14 {
+  height: 2px;
 }
 .login_button_container {
   text-align: center;
@@ -57,20 +96,19 @@ form {
 .login_button,
 .register_button {
   text-align: center;
-  font-family: 'Patrick Hand', cursive;
-  font-size: 70px;
-  font-weight: 700;
+  font-family: 'Nobile', sans-serif;
+  font-size: 65px;
   font-color: #FFFFFF;
 }
 .login_button {
-  margin-top: 57%;
+  margin-top: 270px;
 }
 .login_button, .register_button {
-  background-color: #4C86FF;
+  background-color: #00002f;
   border: none; 
 }
 .register_button {
-  margin-top: 20px;
+  margin-top: 12px;
 }
 .register_link,
 .login_link {
