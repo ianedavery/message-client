@@ -19,11 +19,11 @@ class LoginForm extends Component {
 		return (
 			<div>
 				<form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
-					<label htmlFor='username'>username</label>
-					<Field component='input' type='text' name='username' />
+					<label htmlFor='username' aria-label='username'></label>
+					<Field className='username' component='input' type='text' name='username' placeholder='username'/>
 
-					<label htmlFor='password'>password</label>
-					<Field component='input' type='password' name='password' />
+					<label htmlFor='password' aria-label='password'></label>
+					<Field className='password' component='input' type='password' name='password' placeholder='password'/>
 
 					<button type='submit' disabled={this.props.pristine || this.props.submitting}>login</button>
 				</form>
