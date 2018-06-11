@@ -41,7 +41,7 @@ class LoginForm extends Component {
 
 const mapStateToProps = state => ({
 	loggedIn: state.auth.currentUser !== null,
-	loading: state.auth.loading === true
+	loading: state.auth.loading
 });
 
 const myForm = reduxForm({

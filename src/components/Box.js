@@ -37,7 +37,6 @@ class Box extends Component {
 					<div className='box7 box_top' ref={c => this.container7 = c} />
 				</div>
 				<div>
-					
 					<div className='box8 box_bottom' ref={c => this.container8 = c} />
 					<div className='box9 box_bottom' ref={c => this.container9 = c} />
 					<div className='box10 box_bottom' ref={c => this.container10 = c} />

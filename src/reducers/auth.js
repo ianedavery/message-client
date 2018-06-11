@@ -30,11 +30,13 @@ export default function authReducer(state = initialState, action) {
         });
     } else if (action.type === AUTH_SUCCESS) {
         return Object.assign({}, state, {
-            currentUser: action.currentUser
+            currentUser: action.currentUser,
+            loading: false
         });
     } else if (action.type === AUTH_ERROR) {
         return Object.assign({}, state, {
-            error: action.error
+            error: action.error,
+            loading: false
         });
     }
     return state;
