@@ -1,6 +1,10 @@
+body, html {
+  height: 100%;
+}
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #00002f;
+  position: relative;
 }
 form {
   text-align: center;
@@ -90,6 +94,13 @@ form {
 .box14 {
   height: 2px;
 }
+.login_and_register_container {
+  position: absolute;
+  top: 36%;
+  left: 15%;
+  height: 22%;
+  width: 71%;
+}
 .login_button_container {
   text-align: center;
 }
@@ -100,15 +111,12 @@ form {
   font-size: 65px;
   font-color: #FFFFFF;
 }
-.login_button {
-  margin-top: 270px;
-}
 .login_button, .register_button {
   background-color: #00002f;
   border: none; 
 }
 .register_button {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .register_link,
 .login_link {
