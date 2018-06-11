@@ -6,7 +6,7 @@ class LoginAndRegister extends Component {
 
   	componentWillLeave (callback) {
     	const el = this.container;
-	    TweenMax.fromTo([el], 2, {x: 0, y: 0}, {x: -1000, y: 0, onComplete: callback});
+	    TweenMax.fromTo([el], 1, {x: 0, y: 0}, {x: -1000, y: 0, onComplete: callback});
   	}
 
 	render() {

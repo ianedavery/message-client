@@ -4,22 +4,22 @@ import {TweenMax} from "gsap/TweenMax";
 class Box extends Component {
 
   	componentWillLeave (callback) {
-	    const el1 = this.container1;
-	    const el2 = this.container2;
-	    const el3 = this.container3;
-	    const el4 = this.container4;
-	    const el5 = this.container5;
-	    const el6 = this.container6;
-	    const el7 = this.container7;
-	    const el8 = this.container8;
-	    const el9 = this.container9;
-	    const el10 = this.container10;
-	    const el11 = this.container11;
-	    const el12 = this.container12;
-	    const el13 = this.container13;
-	    const el14 = this.container14;
-	    TweenMax.staggerFromTo([el1, el2, el3, el4, el5, el6, el7], 2, {x: 0, y: 0}, {x: 1000, y: 0, onComplete: callback}, 0.1);
-	    TweenMax.staggerFromTo([el8, el9, el10, el11, el12, el13, el14], 2, {x: 0, y: 0}, {x: 1000, y: 0, onComplete: callback}, 0.1);
+	    const el1 = this.container1,
+	    	  el2 = this.container2,
+	    	  el3 = this.container3,
+	    	  el4 = this.container4,
+	     	  el5 = this.container5,
+	    	  el6 = this.container6,
+	    	  el7 = this.container7,
+	    	  el8 = this.container8,
+	    	  el9 = this.container9,
+	    	  el10 = this.container10,
+	    	  el11 = this.container11,
+	    	  el12 = this.container12,
+	    	  el13 = this.container13,
+	    	  el14 = this.container14;
+	    TweenMax.staggerFromTo([el1, el2, el3, el4, el5, el6, el7], 1, {x: 0, y: 0}, {x: 1000, y: 0, onComplete: callback}, 0.1);
+	    TweenMax.staggerFromTo([el8, el9, el10, el11, el12, el13, el14], 1, {x: 0, y: 0}, {x: 1000, y: 0, onComplete: callback}, 0.1);
   	}
 
 	render() {

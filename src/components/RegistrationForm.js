@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {registerUser} from '../actions/users';
 import {login} from '../actions/auth';
 import {Redirect} from 'react-router-dom';
+import {BeatLoader} from 'react-spinners';
 
 class RegistrationForm extends Component {
 
@@ -21,6 +22,12 @@ class RegistrationForm extends Component {
 			return <Redirect to='/dashboard' />;
 		}
 
+		if(this.props.loading) {
+			return 	<div className='beat_loader'>
+						<BeatLoader color={'#FFFFFF'} size={45} />
+				    </div>;
+		}		
+
 		return (
 			<form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
 				<label htmlFor='username' aria-label='username'></label>
@@ -29,14 +36,15 @@ class RegistrationForm extends Component {
 				<label htmlFor='password' aria-label='password'></label>
 				<Field className='password' component='input' type='password' name='password' placeholder='password' />
 
-				<button type='submit' disabled={this.props.pristine || this.props.submitting}>register</button>
+				<button type='submit' disabled={this.props.pristine || this.props.submitting}>join</button>
 			</form>
 		)
 	}
 }
 
 const mapStateToProps = state => ({
-	loggedIn: state.auth.currentUser !== null
+	loggedIn: state.auth.currentUser !== null,
+	loading: state.auth.loading === true
 });
 
 const myForm = reduxForm({
