@@ -35,7 +35,10 @@ class LandingPage extends Component {
 					{this.state.shouldShowBox && <Box />}
 				</TransitionGroup>
 				<TransitionGroup>
-					{this.state.shouldShowLoginAndRegisterConatiner && <LoginAndRegister goToLogin={() => setTimeout(function(){loginPush();},1000)} goToRegister={() => setTimeout(function(){registrationPush();},1000)} toggleBox={e => this.toggleBox(e)}/>}
+					{this.state.shouldShowLoginAndRegisterConatiner && <LoginAndRegister 
+						goToLogin={() => setTimeout(function(){loginPush();},1000)} 
+						goToRegister={() => setTimeout(function(){registrationPush();},1000)} 
+						toggleBox={e => this.toggleBox(e)}/>}
 				</TransitionGroup>
 			</div>
 		)

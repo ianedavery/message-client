@@ -14,12 +14,16 @@ class LoginAndRegister extends Component {
 
 			<div className='login_and_register_container' ref={c => this.container = c}>
 				<div className='login_button_container'>
-					<button className='login_link login_button' onClick={e => {this.props.goToLogin(); this.props.toggleBox(e)}}>
+					<button 
+						className='login_link login_page_button' 
+						onClick={e => {this.props.goToLogin(); this.props.toggleBox(e)}}>
 						Login
 					</button>
 				</div>
-				<div className='register_button'>
-					<button className='register_link register_button' onClick={e => {this.props.goToRegister(); this.props.toggleBox(e)}}>
+				<div className='register_button_container'>
+					<button 
+						className='register_link register_page_button' 
+						onClick={e => {this.props.goToRegister(); this.props.toggleBox(e)}}>
 						Register
 					</button>
 				</div>

@@ -13,7 +13,7 @@ class MessageReduxForm extends Component {
 	render() {
 
 		return (
-			<form onSubmit={this.props.handleSubmit(text => this.onSubmit(text))}>
+			<form className='message_form' onSubmit={this.props.handleSubmit(text => this.onSubmit(text))}>
 
 				<label htmlFor='text' aria-label='message'></label>
 				<div className='textarea_container'>
