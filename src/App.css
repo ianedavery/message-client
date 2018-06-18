@@ -5,6 +5,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #00002f;
   position: relative;
+  box-sizing: border-box;
 }
 form {
   text-align: center;
@@ -135,6 +136,19 @@ form {
   border: solid 2px #FFFFFF;
   color: #FFFFFF;
   font-size: 20px;
+  box-sizing: border-box;
+}
+.comment_button {
+  border: 2px solid #FFFFFF;
+  background-color: #00002f;
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 16px; 
+}
+.comment_button:enabled {
+  color: #FFFFFF;
 }
 .messages{
   padding: 0 20px 0 20px;
