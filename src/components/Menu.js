@@ -57,7 +57,7 @@ class HamburgerMenu extends Component{
 		return(
 
 			<Menu right noOverlay styles={styles}>
-				<p>Currently logged in as {this.props.user}</p>
+				<p className='current_user'>Currently logged in as {this.props.user}</p>
 				<button className='logout_button' type='button' onClick={() => this.logOut()}>Logout</button>
 			</Menu>
 		
