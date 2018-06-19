@@ -1,11 +1,12 @@
-body, html {
+html,
+body {
   height: 100%;
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #00002f;
   box-sizing: border-box;
-  height: 100%;
+  margin-bottom: 20px;
 }
 form {
   text-align: center;
@@ -123,11 +124,8 @@ form {
   text-decoration: none;
   color: #FFFFFF;
 }
-.message_form {
-  margin-top: 30px;
-}
 .textarea_container {
-  padding: 0 20px 0 20px;
+  padding: 30px 20px 0 20px;
 }
 .textarea {
   margin-top: 40px;
@@ -215,4 +213,13 @@ form {
 .beat_loader{
   text-align: center;
   margin-top: 300px;
+}
+.logout_button{
+  display: block;
+  background-color: #00002f;
+  border-style: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
 }

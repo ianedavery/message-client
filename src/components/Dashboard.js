@@ -17,9 +17,10 @@ class Dashboard extends Component {
 	}
 
 	render() {
+
 		return (
 			<div>
-				<HamburgerMenu />
+				<HamburgerMenu user={this.props.user} />
 				<MessageReduxForm handleNewMessage={() => this.handleNewMessage()} />
 				<Messages messages={this.props.messages} />
 			</div>
@@ -28,7 +29,8 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = state => ({
-    messages: state.messages
+    messages: state.messages,
+    user: state.auth.currentUser.username
 });
 
 export default RequiresLogin()(connect(mapStateToProps)(Dashboard));

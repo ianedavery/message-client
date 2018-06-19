@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {slide as Menu} from 'react-burger-menu';
+import {stack as Menu} from 'react-burger-menu';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 import {connect} from 'react-redux';
@@ -35,7 +35,8 @@ class HamburgerMenu extends Component{
 	  		bmMenu: {
 			    background: '#00002f',
 			    padding: '2.5em 1.5em 0',
-			    fontSize: '1.15em'
+			    fontSize: '1.15em',
+			    borderLeft: '2px solid #FFFFFF'
 	  		},
 	  		bmMorphShape: {
 	    		fill: '#373a47'
@@ -51,12 +52,14 @@ class HamburgerMenu extends Component{
 	    		background: 'rgba(0, 0, 0, 0.3)'
 	  		}
 		}
+			console.log(this.props.user);
 
 		return(
 
-				<Menu right styles={styles}>
-					<button type='button' onClick={() => this.logOut()}>Logout</button>
-				</Menu>
+			<Menu right noOverlay styles={styles}>
+				<p>Currently logged in as {this.props.user}</p>
+				<button className='logout_button' type='button' onClick={() => this.logOut()}>Logout</button>
+			</Menu>
 		
 		)
 	}
