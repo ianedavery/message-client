@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Redirect, Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import {TransitionGroup} from 'react-transition-group'
 import Box from './Box';
 import LoginAndRegister from './LoginAndRegister';

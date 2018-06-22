@@ -10,10 +10,11 @@ const initialState = {
     authToken: null,
     currentUser: null,
     loading: false,
-    error: null
+    errors: null
 };
 
 export default function authReducer(state = initialState, action) {
+    console.log(action.error);
     if (action.type === SET_AUTH_TOKEN) {
         return Object.assign({}, state, {
             authToken: action.authToken
@@ -26,7 +27,7 @@ export default function authReducer(state = initialState, action) {
     } else if (action.type === AUTH_REQUEST) {
         return Object.assign({}, state, {
             loading: true,
-            error: null
+            errors: null
         });
     } else if (action.type === AUTH_SUCCESS) {
         return Object.assign({}, state, {
@@ -35,7 +36,7 @@ export default function authReducer(state = initialState, action) {
         });
     } else if (action.type === AUTH_ERROR) {
         return Object.assign({}, state, {
-            error: action.error,
+            errors: action.errors,
             loading: false
         });
     }

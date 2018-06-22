@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {TweenMax} from "gsap/TweenMax";
-import {Link} from 'react-router-dom';
 
 class LoginAndRegister extends Component {
 

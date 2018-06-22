@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Field, reduxForm} from 'redux-form';
+import {Field, reduxForm, reset} from 'redux-form';
 import {login} from '../actions/auth';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
@@ -22,8 +22,9 @@ class LoginForm extends Component {
 						<BeatLoader color={'#FFFFFF'} size={45} />
 				    </div>;
 		}
-
+console.log(this.props.errors);
 		return (
+
 			<div>
 				<form className='login_form' onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
 					<label htmlFor='username' aria-label='username'></label>
@@ -32,16 +33,19 @@ class LoginForm extends Component {
 					<label htmlFor='password' aria-label='password'></label>
 					<Field className='password' component='input' type='password' name='password' placeholder='password'/>
 
-					<button className='login_button' type='submit' disabled={this.props.pristine || this.props.submitting}>enter</button>
+					<button className='login_button' type='submit' disabled={this.props.pristine || this.props.submitting}>enter</button>				
 				</form>
+				<div className='login_error'>{this.props.errors}</div>
 			</div>
+		
 		);
 	}
 }
 
 const mapStateToProps = state => ({
 	loggedIn: state.auth.currentUser !== null,
-	loading: state.auth.loading
+	loading: state.auth.loading,
+	errors: state.auth.errors
 });
 
 const myForm = reduxForm({
