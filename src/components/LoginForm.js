@@ -22,7 +22,7 @@ class LoginForm extends Component {
 						<BeatLoader color={'#FFFFFF'} size={45} />
 				    </div>;
 		}
-console.log(this.props.errors);
+
 		return (
 
 			<div>

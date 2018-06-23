@@ -37,6 +37,7 @@ class RegistrationForm extends Component {
 				<Field className='password' component='input' type='password' name='password' placeholder='password' />
 
 				<button className='register_button' type='submit' disabled={this.props.pristine || this.props.submitting}>join</button>
+				<div className='login_error'>{this.props.error}</div>
 			</form>
 		)
 	}
