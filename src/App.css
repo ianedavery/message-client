@@ -126,6 +126,8 @@ form {
 }
 .textarea_container {
   padding: 30px 20px 0 20px;
+  max-width: 545px;
+  margin: 0 auto 0 auto;
 }
 .textarea {
   margin-top: 40px;
@@ -154,7 +156,8 @@ form {
 }
 .message {
   border: solid 2px #FFFFFF;
-  margin: 20px 0 20px 0;
+  margin: 20px auto 20px ;
+  max-width: 545px;
   background-color: #00002f;
 }
 .poster_info {
