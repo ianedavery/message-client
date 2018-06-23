@@ -26,7 +26,7 @@ class Box extends Component {
 
 		return (
 
-			<div>
+			<div className='boxes'>
 				<div>
 					<div className='box1 box_top' ref={c => this.container1 = c} />
 					<div className='box2 box_top' ref={c => this.container2 = c} />

@@ -8,12 +8,23 @@ body {
   box-sizing: border-box;
   margin-bottom: 20px;
 }
+#root,
+.app,
+.landing_page,
+.boxes {
+  height: 100%;
+}
 form {
   text-align: center;
 }
+.boxes{
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+}
 .box_top,
 .box_bottom {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 40px;    
 }
@@ -188,7 +199,8 @@ form {
 .register_form {
   padding-left: 40px;
   padding-right: 40px;
-  margin-top: 170px;
+  max-width: 545px;
+  margin: 170px auto 0 auto;
 }
 .login_error {
   margin-top: 50px;

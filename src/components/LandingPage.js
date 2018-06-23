@@ -30,7 +30,7 @@ class LandingPage extends Component {
 
 		return (
 			
-			<div>
+			<div className='landing_page'>
 				<TransitionGroup>
 					{this.state.shouldShowBox && <Box />}
 				</TransitionGroup>

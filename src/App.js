@@ -53,7 +53,7 @@ class App extends Component {
   	render() {
 	    return (
             <Router>
-    		    <div>
+    		    <div className='app'>
                     <Switch>
         		    	<Route exact path='/' component={LandingPage} history={this.props.history} />
                         <Route path='/login' component={LoginForm} />
