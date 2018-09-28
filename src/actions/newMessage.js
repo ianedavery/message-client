@@ -14,7 +14,7 @@ export const addMessageError = error => ({
 
 export const addMessage = text => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-	return fetch(`${API_BASE_URL}/messages`, {
+	return fetch(`${API_BASE_URL}api/messages`, {
 		method: 'POST',
 		headers: {
 			Authorization: `Bearer ${authToken}`,

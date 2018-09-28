@@ -6,7 +6,7 @@ import {normalizeResponseErrors} from '../utils';
 
 //send a 'put' request to the server to register new users
 export const registerUser = user => dispatch => {
-    return fetch(`${API_BASE_URL}/users`, {
+    return fetch(`${API_BASE_URL}api/users`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -16,12 +16,14 @@ export const registerUser = user => dispatch => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .catch(err => {
+            //console.log(err);
             const {reason, message, location} = err;
-            if (reason === 'ValidationError') {
+            if (reason === 'Validation Error') {
                 // Convert ValidationErrors into SubmissionErrors for Redux Form
                 return Promise.reject(
                     new SubmissionError({
-                        [location]: alert(message)
+                        _error: message
+                        //[location]: alert(message)
                     })
                 );
             }

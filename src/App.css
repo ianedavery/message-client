@@ -1,25 +1,175 @@
+html,
+body {
+  height: 100%;
+}
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #4C86FF;
+  background-color: #00002f;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+#root,
+.app,
+.landing_page,
+.boxes {
+  height: 100%;
 }
 form {
   text-align: center;
 }
+.boxes{
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+}
+.box_top,
+.box_bottom {
+  position: absolute;
+  width: 100%;
+  height: 40px;    
+}
+.box1, .box8,
+.box2, .box7,
+.box3, .box6,
+.box4, .box5,
+.box9, .box10,
+.box11, .box12,
+.box13, .box14  {
+  background-color: #FFFFFF;
+}
+.box1 {
+  top: 0;
+}
+.box2 {
+  top: 35px;
+}
+.box3 {
+  top: 68px;  
+}
+.box4 {
+  top: 99px;  
+}
+.box5 {
+  top: 129px;  
+}
+.box6 {
+  top: 159px;
+}
+.box7 {
+  top: 187px;
+}
+.box8 {
+  bottom: 0;
+}
+.box9 {
+  bottom: 35px;
+}
+.box10 {
+  bottom: 68px;
+}
+.box11 {
+  bottom: 99px;
+}
+.box12 {
+  bottom: 129px;
+}
+.box13 {
+  bottom: 159px;
+}
+.box14 {
+  bottom: 187px;
+}
+.box1,
+.box8 {
+  height: 30px;
+}
+.box2,
+.box9 {
+  height: 25px;
+}
+.box3,
+.box10 {
+  height: 20px;
+}
+.box4,
+.box11 {
+  height: 15px;
+}
+.box5,
+.box12 {
+  height: 10px;
+}
+.box6,
+.box13 {
+  height: 5px;
+}
+.box7,
+.box14 {
+  height: 2px;
+}
+.login_and_register_container {
+  position: absolute;
+  top: 36%;
+  left: 15%;
+  height: 22%;
+  width: 71%;
+}
+.login_button_container,
+.register_button_container {
+  text-align: center;
+}
+.register_button_container {
+  margin-top: 20px;
+}
+.login_page_button,
+.register_page_button {
+  text-align: center;
+  font-family: 'Nobile', sans-serif;
+  font-size: 65px;
+  font-color: #FFFFFF;
+  background-color: #00002f;
+  border: none;  
+}
+.register_link,
+.login_link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 .textarea_container {
-  padding: 0 20px 0 20px;
+  padding: 30px 20px 0 20px;
+  max-width: 545px;
+  margin: 0 auto 0 auto;
 }
 .textarea {
+  margin-top: 40px;
   width: 100%;
   height: 50px;
-  border-radius: 10px;
+  background-color: #00002f;
+  border: solid 2px #FFFFFF;
+  color: #FFFFFF;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.comment_button {
+  border: 2px solid #FFFFFF;
+  background-color: #00002f;
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 16px; 
+}
+.comment_button:enabled {
+  color: #FFFFFF;
 }
 .messages{
   padding: 0 20px 0 20px;
 }
 .message {
-  border-radius: 10px;
-  margin: 20px 0 20px 0;
-  background-color: white;
+  border: solid 2px #FFFFFF;
+  margin: 20px auto 20px ;
+  max-width: 545px;
+  background-color: #00002f;
 }
 .poster_info {
   position: relative;
@@ -33,15 +183,69 @@ form {
   margin: 0;
   top: 10px;
   left: 70px;
-  color: #666666;
+  color: #FFFFFF;
   font-size: 15px;
 }
 .metadata span {
   font-size: 20px;
-  color: #3A33FF;
+  color: #FFFFFF;
 }
 .message_text {
   margin: 16px 10px 16px 10px;
   padding-bottom: 7px;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+.login_form,
+.register_form {
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 545px;
+  margin: 170px auto 0 auto;
+}
+.login_error {
+  margin-top: 50px;
+  text-align: center;
+  color: rgb(255,255,255);
+  font-size: 20px;
+}
+.username, .password {
+  background-color: #00002f;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #FFFFFF;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+  font-size: 25px;
+}
+.login_button, 
+.register_button {
+  background-color: #00002f;
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+}
+.login_button:enabled, 
+.register_button:enabled {
+  color: #FFFFFF;
+}
+.beat_loader{
+  text-align: center;
+  margin-top: 300px;
+}
+.current_user{
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.logout_button{
+  display: block;
+  background-color: #00002f;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  height: 50px;
+  width: 100%;
   font-size: 24px;
 }
